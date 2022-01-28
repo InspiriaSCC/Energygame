@@ -1,7 +1,7 @@
  
 
 
-> Open this page at [https://yngel72.github.io/energygame/](https://yngel72.github.io/energygame/)
+> Open this page at [https://InspiriaSCC.github.io/energygame/](https://InspiriaSCC/Energygame.io/energygame/)
 
 ## Links to all the tutorials in this repository
 * [Tutorial 1 - Introduction](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial01e)
