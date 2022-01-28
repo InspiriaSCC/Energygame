@@ -29,7 +29,7 @@ To edit this repository in MakeCode.
 
 * open [https://arcade.makecode.com/](https://arcade.makecode.com/)
 * click on **Import** then click on **Import URL**
-* paste **https://github.com/https://github.com/InspiriaSCC/Energygame** and click import
+* paste **https://github.com/InspiriaSCC/Energygame** and click import
 
 ## Blocks preview
 
