@@ -198,7 +198,7 @@ for (let index = 0; index < 100; index++) {
     } else {
         
     }
-    tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
+    tiles.placeOnRandomTile(energy, sprites.castle.tilePath5)
 }
 info.startCountdown(10)
 
@@ -494,9 +494,9 @@ for (let index = 0; index < 100; index++) {
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Food)
     if (Math.percentChance(80)) {
-        tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
+        tiles.placeOnRandomTile(energy, sprites.castle.tilePath5)
     } else {
-        tiles.placeOnRandomTile(energi, sprites.castle.tileGrass1)
+        tiles.placeOnRandomTile(energy, sprites.castle.tileGrass1)
     }
 }
 info.startCountdown(10)
