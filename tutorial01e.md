@@ -253,7 +253,7 @@ energy = sprites.create(img`
 
 
 ### Step 2
-Make your player character appear in a random spot. In the ``||Scene.Scene||`` menu, find ``||Scene.place mySprite on top of random...||``. Place this in ``||loops.on start||``, underneath ``||Variables.Set mySprite to...||``. Click the grey square and choose the sand coloured tile from the menu that pops up. 
+Make your player character appear in a random spot. In the ``||Scene:Scene||`` menu, find ``||Scene:place mySprite on top of random...||``. Place this in ``||loops:on start||``, underneath ``||Variables:Set mySprite to...||``. Click the grey square and choose the sand coloured tile from the menu that pops up. 
 
 ```blocks
 tiles.setTilemap(tilemap`level1`)
@@ -302,7 +302,7 @@ let energy = sprites.create(img`
  ```
 
 ### Step 3
-Make the energy sprite (Lightning) appear in a random spot too. Find a ``||scene.place mySprite on top of random...||`` block and place it underneath the ``||variables.set energy to...||``. Here you'll have to change mysprite to energy and remember to choose a tile. 
+Make the energy sprite (Lightning) appear in a random spot too. Find a ``||scene:place mySprite on top of random...||`` block and place it underneath the ``||variables:set energy to...||``. Here you'll have to change mysprite to energy and remember to choose a tile. 
 
 ```blocks
 tiles.setTilemap(tilemap`level1`)
@@ -352,7 +352,7 @@ tiles.placeOnRandomTile(energy, sprites.castle.tilePath5)
 ```
 
 ### Step 4
-We need more energy sprites. Use a ``||loops.repeat||`` loop from the ``||loops.loops||``  menu to repeat the two lower blocks in ``||loops.on start||`` about 100 times.
+We need more energy sprites. Use a ``||loops:repeat||`` loop from the ``||loops:loops||``  menu to repeat the two lower blocks in ``||loops:on start||`` about 100 times.
 Tip: You can move individual blocks by pressing and holding Ctrl while you drag them.
 
 ```blocks
@@ -408,7 +408,7 @@ for (let index = 0; index < 100; index++) {
 
 ### Step 5
 
-When the player catches a lightning, we want it to disappear. In the ``||Sprites.Sprites||`` menu you'll find ``||Sprites.on sprite of kind player overlaps...||``. Place it anywhere on the screen. Change it so ``||variables.otherSprite||`` is of the kind ``||Sprites.food||``
+When the player catches a lightning, we want it to disappear. In the ``||Sprites:Sprites||`` menu you'll find ``||Sprites:on sprite of kind player overlaps...||``. Place it anywhere on the screen. Change it so ``||variables:otherSprite||`` is of the kind ``||Sprites:food||``
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -429,7 +429,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 
 ### Step 7
 
-We need to keep track of your score. In the ``||Info.Info||`` menu you'll find ``||Info.change score by..||``. Place this block in the ``||Sprites.overlap||`` block. Test the game to check if your score increases when you capture energy.
+We need to keep track of your score. In the ``||Info:Info||`` menu you'll find ``||Info:change score by..||``. Place this block in the ``||Sprites:overlap||`` block. Test the game to check if your score increases when you capture energy.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -443,7 +443,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 
 ### Step 8
 
-The final touch is a countdown clock. At the bottom of the ``||Loops.on start||`` block, place a ``||Info.start countdown||`` block. It's up to you to decide how much time you'll have to gather points.
+The final touch is a countdown clock. At the bottom of the ``||Loops:on start||`` block, place a ``||Info:start countdown||`` block. It's up to you to decide how much time you'll have to gather points.
 
 ```blocks
 let energy: Sprite = null
