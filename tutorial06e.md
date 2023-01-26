@@ -185,7 +185,7 @@ info.startCountdown(10)
 How about making a little sound when something happens in your game? Continue to learn how! 
 
 ### Step 1
-Let's make a sound when the player character picks up energy. Get a ``||Music.play sound ba ding||`` block from the ``||Music.Music||`` menu and place it in the ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||`` block.
+Let's make a sound when the player character picks up energy. Get a ``||music:play sound ba ding||`` block from the ``||music:Music||`` menu and place it in the ``||sprites:on sprite of kind player overlaps otherSprite of kind Food||`` block.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -198,7 +198,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 
 ### Step 2
 
-You can change the sound by clicking on the tiny "down" arrow right next to where it says ``||Music.ba ding||``. Try some different sounds and find one you like. Now you can repeat this whole process for your other energy kinds.
+You can change the sound by clicking on the tiny "down" arrow right next to where it says ``||music:ba ding||``. Try some different sounds and find one you like. Now you can repeat this whole process for your other energy kinds.
 
 ```blocks
 namespace SpriteKind {

@@ -186,7 +186,7 @@ A little bit of extra code will help bring your player character to life. Click 
 
 ### Step 1
 For the animation to play correctly, we need to force the game to update around three times per second.
-For this, we need the block ``||Game.on game update every 500 ms||``. Get one from the ``||Game.Game||`` menu (under "Advanced") and change 500 to 300 ms.
+For this, we need the block ``||game:on game update every 500 ms||``. Get one from the ``||game:Game||`` menu (under "Advanced") and change 500 to 300 ms.
 
 ```blocks
 game.onUpdateInterval(300, function () {})
@@ -194,7 +194,7 @@ game.onUpdateInterval(300, function () {})
 
 ### Step 2
 
-Now we need to play one animation per direction of movement. For this we need an ``||Logic.if-then-else||`` block from the ``||Logic.Logic||`` menu. Get one and place it inside your ``||Game.on game update every 300 ms||`` block.
+Now we need to play one animation per direction of movement. For this we need an ``||logic:if-then-else||`` block from the ``||logic:Logic||`` menu (the one shaped like an "E"). Get one and place it inside your ``||game:on game update every 300 ms||`` block.
 
 ```blocks
 game.onUpdateInterval(300, function () {
@@ -208,7 +208,7 @@ game.onUpdateInterval(300, function () {
 ```
 
 ### Step 3
-CLick the little "+" sign in the lower left corner of your new ``||Logic.if-then-else||`` block until you have 5 gaps in your block. 
+CLick the little "+" sign in the lower left corner of your new ``||logic:if-then-else||`` block until you have 5 gaps in your block. 
 You now have what you need to set up an animation for each direction and for when you're standing still.
 
 ```blocks
@@ -230,7 +230,7 @@ game.onUpdateInterval(300, function () {
 
 ### Step 4
 Let's make your character walk to the left. 
-Get a hexagonal ``||Controller.is A button pressed||`` block from the ``||Controller.Controller||`` menu and place it inside the topmost hexagon in the ``||Logic.if-then-else||`` block. Click the tiny downwards arrow to the left of where it says ``||Variables.A||`` in the hexagon and choose ``||Variables.left||`` from the drop-down menu.
+Get a hexagonal ``||controller:is A button pressed||`` block from the ``||controller:Controller||`` menu and place it inside the topmost hexagon in the ``||logic:if-then-else||`` block. Click the tiny downwards arrow to the left of where it says ``||variables:A||`` in the hexagon and choose ``||variables:left||`` from the drop-down menu.
 
 ```blocks
 game.onUpdateInterval(300, function () {
@@ -249,7 +249,7 @@ game.onUpdateInterval(300, function () {
 ```
 
 ### Step 5
-Get an ``||Animation.animate mySprite frames interval||`` block from the ``||Animation.Animation||`` menu (under "Advanced") and place it inside the topmost gap of your ``||Logic.if-then-else||`` block.
+Get an ``||animation:animate mySprite frames interval||`` block from the ``||animation:Animation||`` menu (under "Advanced") and place it inside the topmost gap of your ``||logic:if-then-else||`` block.
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
@@ -289,7 +289,7 @@ game.onUpdateInterval(300, function () {
 })
 ```
 ### Step 6
-Change where it says 500 ms to 100 ms in the ``||Animation.animate mySprite||`` block and make sure it says ``||Animation.loop OFF||``at the bottoom of the block.
+Change where it says 500 ms to 100 ms in the ``||animation:animate mySprite||`` block and make sure it says ``||animation:loop OFF||``at the bottoom of the block.
 
 ```blocks
 game.onUpdateInterval(300, function () {
@@ -329,7 +329,7 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Step 7
-Click the grey square in the ``||Animation.animate mySprite||`` block. Choose "gallery" in the middle of the top of the screen. Notice how some of the thumbnails have small film camera icons in the bottom left corner? Hold your mouse pointer over a thumbnail to see the animation. Find your player character and click the animation where your character is walking towards the left.
+Click the grey square in the ``||animation:animate mySprite||`` block. Choose "gallery" in the middle of the top of the screen. Notice how some of the thumbnails have small film camera icons in the bottom left corner? Hold your mouse pointer over a thumbnail to see the animation. Find your player character and click the animation where your character is walking towards the left.
 
 ```blocks
 game.onUpdateInterval(300, function () {
@@ -403,8 +403,8 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Step 8
-Repeat step 5 through 7 for the three next gaps in your ``||Logic.if-then-else||`` block for the remaining directions. Remember to choose the correct animation and to set the time to 100 ms.
-Inside the final gap of your ``||Logic.if-then-else||`` block, place a ``||Sprites.set mySprite image to||`` block and choose the gallery image where your player character is facing you.
+Repeat step 5 through 7 for the three next gaps in your ``||logic.if-then-else||`` block for the remaining directions. Remember to choose the correct animation and to set the time to 100 ms.
+Inside the final gap of your ``||logic:if-then-else||`` block, place a ``||sprites:set mySprite image to||`` block and choose the gallery image where your player character is facing you.
 ```blocks
 let mySprite: Sprite = null
 game.onUpdateInterval(300, function () {
@@ -663,7 +663,7 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Step 9
-Congratulations! That's all of it! Now you know how to make your character move in a more life like fashion.
+Congratulations! That's all of it! Now you know how to make your character move in a more life-like fashion.
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 

@@ -183,10 +183,10 @@ info.startCountdown(10)
 Lets set up an invisible border that can only be crossed at a control post. It will make it harder for rivals to steal resources from your island, but it may make the game harder for you as well...
 
 ### Step 1
-First, we'll need to set up a guard post where the two islands meet. The control post needs to be a unique ``||Scene.tile||``. Click the tiny map icon in the ``||Scene.set tilemap to||``, find a previously unused ``||Scene.tile||`` you think would make a nice control post and place it (just the one) in the area where the two islands meet.
+First, we'll need to set up a guard post where the two islands meet. The control post needs to be a unique ``||scene:tile||``. Click the tiny map icon in the ``||scene:set tilemap to||``, find a previously unused ``||scene:tile||`` you think would make a nice control post and place it (just the one) in the area where the two islands meet.
 ![Border guard](https://raw.githubusercontent.com/InspiriaSCC/Energygame/master/assets/guardpost.jpg)
 ### Step 2
-Click on the small map icon in the ``||Scene.set tilemap to||`` block once more. Click the wall icon underneath the smaller picture of the map on the left side of the screen. "Draw walls" will pop up under the icon to confirm it's the right one as you hold your mouse pointer over it.
+Click on the small map icon in the ``||scene:set tilemap to||`` block once more. Click the wall icon underneath the smaller picture of the map on the left side of the screen. "Draw walls" will pop up under the icon to confirm it's the right one as you hold your mouse pointer over it.
 ![Veggverktøy](https://raw.githubusercontent.com/InspiriaSCC/Energygame/master/assets/Walltool.jpg)
 ### Step 3
 Draw a wall that divides the map between the two islands. Make sure the border goes all the way out to the edge of the map and that the only opening is at the border control post.
@@ -218,7 +218,7 @@ let borderGuard = sprites.create(img`
 
 ```
 ### Step 5
-Place the border guard on the map by adding a ``||Scene.place mySprite on top of random tile||`` block from the ``||Scene.Scene||`` menu underneath your new blocks and choose ``||Variables.borderGuard||`` instead of ``||Variables.mySprite||``. Choose the controlpost tile as the tile kind to place the sprite on.
+Place the border guard on the map by adding a ``||scene:place mySprite on top of random tile||`` block from the ``||scene:Scene||`` menu underneath your new blocks and choose ``||variables:borderGuard||`` instead of ``||variables:mySprite||``. Choose the controlpost tile as the tile kind to place the sprite on.
 ```block
 
 namespace SpriteKind {
@@ -270,7 +270,7 @@ tiles.placeOnRandomTile(borderGuard, sprites.builtin.forestTiles0)
 ```
 ### Step 6
 What happens when the player meets the guard?
-Get a ``||Sprites.on sprite of kind Player overlaps sprite of kind||`` block so you can decide what happens when the player and the guard sprites overlap.
+Get a ``||sprites:on sprite of kind Player overlaps sprite of kind||`` block so you can decide what happens when the player and the guard sprites overlap.
 
 Maybe the guard tosses the player to a random tile in a specific or random area? Maybe the player can bribe the guard to let them pass if they have enough energy? Could the player sneak past the guard in some other way?
 ```block

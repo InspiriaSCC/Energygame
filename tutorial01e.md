@@ -417,8 +417,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 ```
 
 ### Step 6
-Inside the block you just created, first place a ``||Sprites.destroy mySprite||`` block. 
-Click on the variable ``||variables.otherSprite||`` and drag it to the oval area that says ``||variables.mySprite||``.
+Inside the block you just created, first place a ``||Sprites:destroy mySprite||`` block. 
+Click on the variable ``||variables:otherSprite||`` and drag it to the oval area that says ``||variables:mySprite||``.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {

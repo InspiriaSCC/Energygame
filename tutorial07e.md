@@ -184,14 +184,14 @@ info.startCountdown(10)
 How do different energy sources affect the environment? Here's a suggestion for how to make the game about saving the planet.
 
 ### Step 1
-We'll let the planet itself be player 2 and have life that's diminished by gathering certain types of energy. Get a ``||Info.set player2 life to 3||`` block from the ``||Info.Info||`` menu and place it inside your main ``||Loops.on start||`` loop, right at the very bottom underneath the rest of your main code.
+We'll let the planet itself be player 2 and have life that's diminished by gathering certain types of energy. Get a ``||info:set player2 life to 3||`` block from the ``||info:Info||`` menu and place it inside your main ``||loops:on start||`` loop, right at the very bottom underneath the rest of your main code.
 
 ```block
 info.player2.setLife(3)
 ```
 
 ### Step 2
-Grab a ``||Info.change player2 life by -1||`` block from the ``||Info.Info||`` menu and place it inside the ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||`` block that controls what happens when you pick up the lightnings. The lightnings represents fossil fuels and have a negative impact on the planets life.
+Grab a ``||info:change player2 life by -1||`` block from the ``||info:Info||`` menu and place it inside the ``||sprites:on sprite of kind player overlaps otherSprite of kind Food||`` block that controls what happens when you pick up the lightnings. The lightnings represent fossil fuels and have a negative impact on the planet's life.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -202,7 +202,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 ```
 
 ### Step 3
-In your own game, you can repeat step 2 for any ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||`` block that represents fuels that are harmful to the environment. Renewable energy sources can be left as they are, since they have a neutral or at least much smaller negative impact on the environment.
+In your own game, you can repeat step 2 for any ``||sprites:on sprite of kind player overlaps otherSprite of kind [EnergyKind]||`` block that represents fuels that are harmful to the environment. Renewable energy sources can be left as they are, since they have a neutral or at least much smaller negative impact on the environment.
 
 ```blocks
 namespace SpriteKind {
@@ -217,7 +217,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherS
 ```
 
 ### Step 4
-What happens when the planet runs out of life? Well, it probably goes without saying, but you'll have to use a ``||Info.on player 2 life zero||`` block from the ``||Info.Info||`` menu to make something happen. You can put sounds from the ``||Music.Music||`` menu in there, animate the screen with blocks from the ``||Scene.Scene||`` menu, or maybe just place a ``||Game.game over||`` block from ``||Game.Game||`` menu in there? (Warning: The ``||Game.game over||`` block will stop any other blocks inside the ``||Info.on life zero||``  from taking effect.)
+What happens when the planet runs out of life? Well, it probably goes without saying, but you'll have to use an ``||info:on player 2 life zero||`` block from the ``||info:Info||`` menu to make something happen. You can put sounds from the ``||music:Music||`` menu in there, animate the screen with blocks from the ``||scene:Scene||`` menu, or maybe just place a ``||game:game over||`` block from ``||game:Game||`` menu in there? (Warning: The ``||game:game over||`` block will stop any other blocks inside the ``||info:on life zero||``  from taking effect.)
 
 ```blocks
 info.player2.onLifeZero(function () {

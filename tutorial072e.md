@@ -184,14 +184,14 @@ info.startCountdown(10)
 How do different energy sources affect the environment? Here's a suggestion for how to make the game about saving the planet.
 
 ### Step 1
-Let's start by adding a fossil fuel source, like coal. Find a ``||Loops.repeat 4 times||`` block from the ``||Loops.Loops||``-menu and place it in your main code, underneath the other ``||Loops.repeat||`` blocks. Write 100 where i says 4 to make 100 instances of coal on the map.
+Let's start by adding a fossil fuel source, like coal. Find a ``||loops:repeat 4 times||`` block from the ``||loops:Loops||``-menu and place it in your main code, underneath the other ``||loops:repeat||`` blocks. Write 100 where i says 4 to make 100 instances of coal on the map.
 ```block
 for (let index = 0; index < 100; index++) {
 	
 }
 ```
 ### Step 2
-Get a ``||Variables.set mySprite2 to||`` block from the ``||Sprites.Sprites||`` menu. Create a new variable called ``||Variables.coal||`` by clicking where it says ``||Variables.mySprite2||`` and choose ``||Variables.create new||``. Add a new variable kind called ``||Sprites.Fossil||`` in a similar way by clicking where it says ``||Sprites.Player||``. Click the gray square and draw a piece of coal.
+Get a ``||variables:set mySprite2 to||`` block from the ``||sprites:Sprites||`` menu. Create a new variable called ``||variables:coal||`` by clicking where it says ``||variables:mySprite2||`` and choose ``||variables:create new||``. Add a new variable kind called ``||sprites:Fossil||`` in a similar way by clicking where it says ``||sprites:Player||``. Click the gray square and draw a piece of coal.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
@@ -220,7 +220,7 @@ for (let index = 0; index < 100; index++) {
 }
 ```
 ### Step 3
-Get a ``||Logic.if then else||`` block from the ``||Logic.Logic||`` menu and place it inside the ``||Loops.repeat||`` block you just got.
+Get a ``||logic:if then else||`` block from the ``||logic:Logic||`` menu and place it inside the ``||loops:Repeat||`` block you just got.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
@@ -254,7 +254,7 @@ for (let index = 0; index < 100; index++) {
 }
 ```
 ### Step 4
-Find a small ``||Math.0 % chance||`` block from the ``||Math.Math||`` menu and place it where it says ``||Logic.true||`` in the last block you fetched. Type in 80 where it says 0.
+Find a small ``||math:0 % chance||`` block from the ``||math:Math||`` menu and place it where it says ``||logic:true||`` in the last block you fetched. Type in 80 where it says 0.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
@@ -288,7 +288,7 @@ for (let index = 0; index < 100; index++) {
 }
 ```
 ### Step 5
-Fetch a ``||Scene.place mySprite on random||`` block from the ``||Scene.Scene||`` menu. Change ``||Variables.mySprite2||`` to ``||Variables.coal||``, click the gray square and choose the green tile.
+Fetch a ``||scene:place mySprite on random||`` block from the ``||scene:Scene||`` menu. Change ``||variables:mySprite2||`` to ``||variables:coal||``, click the gray square and choose the green tile.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
@@ -322,7 +322,7 @@ for (let index = 0; index < 100; index++) {
 }
 ```
 ### Step 6
-Find another ``||Scene.place mySprite on random||`` block in the ``||Scene.Scene||`` menu. Change ``||Variables.mySprite2||`` to ``||Variables.coal||``, click the gray square and choose the sand coloured tile. You've now distributed the coal resources between the two islands. If you want to, you can add more fossil fuel sources by repeating the procedure in step 1-6.
+Find another ``||scene:place mySprite on random||`` block in the ``||scene:Scene||`` menu. Change ``||variables:mySprite2||`` to ``||variables:coal||``, click the gray square and choose the sand coloured tile. You've now distributed the coal resources between the two islands. If you want to, you can add more fossil fuel sources by repeating the procedure in step 1-6.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
@@ -357,14 +357,14 @@ for (let index = 0; index < 100; index++) {
 ```
 
 ### Step 7
-We'll let the planet itself be player 2 and give it some life that will be reduced if we gather certain types of energy. Get a ``||Info.set player2 life to 3||`` block from the ``||Info.Info||`` menu and place it inside your main ``||Loops.on start||`` loop, right at the very bottom underneath the rest of your main code.
+We'll let the planet itself be player 2 and give it some life that will be reduced if we gather certain types of energy. Get a ``||info:set player2 life to 3||`` block from the ``||info:Info||`` menu and place it inside your main ``||loops:on start||`` loop, right at the very bottom underneath the rest of your main code.
 
 ```block
 info.player2.setLife(3)
 ```
 
 ### Step 8
-Grab a ``||Info.change player2 life by -1||`` block from the ``||Info.Info||`` menu and place it inside the ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||`` block that controls what happens when you pick up the lightnings. The lightnings represents fossil fuels and have a negative impact on the planets life.
+Grab a ``||info:change player2 life by -1||`` block from the ``||info:Info||`` menu and place it inside the ``||sprites:on sprite of kind player overlaps otherSprite of kind Food||`` block that controls what happens when you pick up the lightnings. The lightnings represent fossil fuels and have a negative impact on the planet's life.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -375,7 +375,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 ```
 
 ### Step 9
-In your own game, you can repeat step 2 for any ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||`` block that represents fuels that are harmful to the environment. Renewable energy sources can be left as they are, since they have a neutral or at least much smaller negative impact on the environment.
+In your own game, you can repeat step 2 for any ``||sprites:on sprite of kind player overlaps otherSprite of kind [EnergyKind]||`` block that represents fuels that are harmful to the environment. Renewable energy sources can be left as they are, since they have a neutral or at least much smaller negative impact on the environment.
 
 ```blocks
 namespace SpriteKind {
@@ -390,7 +390,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherS
 ```
 
 ### Step 10
-What happens when the planet runs out of life? Well, it probably goes without saying, but you'll have to use a ``||Info.on player 2 life zero||`` block from the ``||Info.Info||`` menu to make something happen. You can put sounds from the ``||Music.Music||`` menu in there, animate the screen with blocks from the ``||Scene.Scene||`` menu, or maybe just place a ``||Game.game over||`` block from ``||Game.Game||`` menu in there? (Warning: The ``||Game.game over||`` block will stop any other blocks inside the ``||Info.on life zero||``  from taking effect.)
+What happens when the planet runs out of life? Well, it probably goes without saying, but you'll have to use a ``||info:on player 2 life zero||`` block from the ``||info:Info||`` menu to make something happen. You can put sounds from the ``||music:Music||`` menu in there, animate the screen with blocks from the ``||scene:Scene||`` menu, or maybe just place a ``||game:game over||`` block from ``||game:Game||`` menu in there? (Warning: The ``||game:game over||`` block will stop any other blocks inside the ``||info:on life zero||``  from taking effect.)
 
 ```blocks
 info.player2.onLifeZero(function () {
