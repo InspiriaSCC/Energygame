@@ -194,7 +194,7 @@ game.onUpdateInterval(300, function () {})
 
 ### Step 2
 
-Now we need to play one animation per direction of movement. For this we need an ``||logic:if-then-else||`` block from the ``||logic:Logic||`` menu (the one shaped like an "E"). Get one and place it inside your ``||game:on game update every 300 ms||`` block.
+Now we need to play one animation for each direction of movement. For this we need an ``||logic:if-then-else||`` block from the ``||logic:Logic||`` menu (the one shaped like an "E"). Get one and place it inside your ``||game:on game update every 300 ms||`` block.
 
 ```blocks
 game.onUpdateInterval(300, function () {
@@ -403,7 +403,7 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Step 8
-Repeat step 5 through 7 for the three next gaps in your ``||logic.if-then-else||`` block for the remaining directions. Remember to choose the correct animation and to set the time to 100 ms.
+Repeat step 5 through 7 for the three next gaps in your ``||logic:if-then-else||`` block for the remaining directions. Remember to choose the correct animation and to set the time to 100 ms.
 Inside the final gap of your ``||logic:if-then-else||`` block, place a ``||sprites:set mySprite image to||`` block and choose the gallery image where your player character is facing you.
 ```blocks
 let mySprite: Sprite = null
