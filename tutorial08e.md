@@ -192,7 +192,7 @@ Click on the small map icon in the ``||scene:set tilemap to||`` block once more.
 Draw a wall that divides the map between the two islands. Make sure the border goes all the way out to the edge of the map and that the only opening is at the border control post.
 ![Grensemur](https://raw.githubusercontent.com/InspiriaSCC/Energygame/master/assets/borderwall.gif)
 ### Step 4
-Add a guard to the control post. Get a ``||Sprites.set mySprite to sprite of kind||`` block from the ``||Sprites.Sprites||`` menu and place it inside your main code near the bottom. Click the grey square in the block and choose an image for your guard. Click where it says ``||Variables.mySprite||`` in the same block and choose ``||variables.new variable||``. Name the new variable ``||Variables.borderGuard||``. Change the ``||Sprites.Kind||`` to a new kind that you can name ``||Sprites.Guard||`` or something similar that makes sense.
+Add a guard to the control post. Get a ``||Sprites:set mySprite to sprite of kind||`` block from the ``||Sprites:Sprites||`` menu and place it inside your main code near the bottom. Click the grey square in the block and choose an image for your guard. Click where it says ``||Variables:mySprite||`` in the same block and choose ``||variables:new variable||``. Name the new variable ``||Variables:borderGuard||``. Change the ``||Sprites:Kind||`` to a new kind that you can name ``||Sprites:Guard||`` or something similar that makes sense.
 ```block
 namespace SpriteKind {
     export const Guard = SpriteKind.create()
