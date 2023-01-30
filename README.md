@@ -10,7 +10,7 @@
 * [Tutorial 4 - Animating your player character](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial04e)
 * [Tutorial 5 - Adding a rival](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial05e)
 * [Tutorial 6 - Adding sound effects](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial06e)
-* [Tutorial 7 - Environmantal impact](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial07e)
+* [Tutorial 7 - Environmental impact](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial07e)
 * [Tutorial 7.2 - Alternative environmental impact](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial072e)
 * [Tutorial 8 - Border control](https://arcade.makecode.com/#tutorial:github:InspiriaSCC/Energygame/tutorial08e)
 
